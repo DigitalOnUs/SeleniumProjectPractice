@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import au.com.bytecode.opencsv.CSVReader;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +19,6 @@ public class BaseTest {
     private Actions action;
 
 
-
     @BeforeTest
     public void setup() throws IOException {
 
@@ -26,16 +26,16 @@ public class BaseTest {
         String[] cell;
         String URLApp = "";
         String driverLocation = "";
-        String email = "" ;
+        String email = "";
         while ((cell = reader.readNext()) != null) {
             for (int i = 0; i < 1; i++) {
                 URLApp = cell[i];
-                driverLocation = cell[i+1];
-                email = cell[i+2];
+                driverLocation = cell[i + 1];
+                email = cell[i + 2];
 
             }
         }
-        System.setProperty("webdriver.chrome.driver",driverLocation);
+        System.setProperty("webdriver.chrome.driver", driverLocation);
         driver = new ChromeDriver();
         action = new Actions(driver);
 

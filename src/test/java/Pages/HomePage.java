@@ -16,20 +16,21 @@ public class HomePage {
     WebDriver driver;
 
 
-    public HomePage(WebDriver driver){
+    public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
     LocatorsRepository locatorsRepository = new LocatorsRepository();
 
-    public void validateLogo(){
+    public void validateLogo() {
         WebElement homeLogo = driver.findElement(By.cssSelector(locatorsRepository.getCssHomeLogo()));
         Assert.assertTrue(homeLogo.isDisplayed());
 
     }
-    public void goToDresses(){
 
-        WebElement dressesButton = (new WebDriverWait(driver,10))
+    public void goToDresses() {
+
+        WebElement dressesButton = (new WebDriverWait(driver, 10))
                 .until(ExpectedConditions.elementToBeClickable(By.cssSelector(locatorsRepository.getCssDressesMenu())));
 
         Actions action = new Actions(driver);
@@ -39,13 +40,11 @@ public class HomePage {
 
     }
 
-    public void goToLogin(){
+    public void goToLogin() {
         WebElement loginButton = driver.findElement(By.cssSelector(locatorsRepository.getCssLoginButton()));
         loginButton.click();
     }
 
 
-
-
-    }
+}
 

@@ -12,37 +12,37 @@ import org.xml.sax.Locator;
 
 public class LoginPage {
 
-    WebDriver driver ;
+    WebDriver driver;
 
-    public LoginPage(WebDriver driver){
-        this.driver = driver ;
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
     }
 
     LocatorsRepository locatorsRepository = new LocatorsRepository();
 
-    public void enterUsername(String a){
+    public void enterUsername(String a) {
         WebElement inputEmail = driver.findElement(By.cssSelector(locatorsRepository.getCssInputFieldUsername()));
         inputEmail.sendKeys(a);
     }
 
-    public void enterPassword(String b){
+    public void enterPassword(String b) {
         WebElement inputPass = driver.findElement(By.cssSelector(locatorsRepository.getCssInputFieldPassword()));
         inputPass.sendKeys(b);
     }
 
-    public void clickSignIn(){
+    public void clickSignIn() {
         WebElement SignInBtn = driver.findElement(By.cssSelector(locatorsRepository.getCssSignInButton()));
         SignInBtn.click();
 
     }
 
-    public void validateLogin(){
+    public void validateLogin() {
         WebElement customerView = driver.findElement(By.cssSelector(locatorsRepository.getCssCustomerAccountButton()));
         Assert.assertTrue(customerView.isDisplayed());
     }
 
-    public void goToDressesFromLogin(){
-        WebElement dressesButton = (new WebDriverWait(driver,10))
+    public void goToDressesFromLogin() {
+        WebElement dressesButton = (new WebDriverWait(driver, 10))
                 .until(ExpectedConditions.elementToBeClickable(By.cssSelector(locatorsRepository.getCssDressesMenu())));
         Actions action = new Actions(driver);
         action.moveToElement(dressesButton).perform();

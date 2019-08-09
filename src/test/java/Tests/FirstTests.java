@@ -8,13 +8,13 @@ import org.testng.annotations.Test;
 
 public class FirstTests extends BaseTest{
 
-    @Test(enabled = false)
+    @Test
     public void validateHomePageActive(){
         HomePage homePage = new HomePage(driver);
         homePage.validateLogo();
     }
 
-    @Test
+    @Test(enabled = false)
     public void addToCartItem(){
         HomePage homePage = new HomePage(driver);
         homePage.validateLogo();
@@ -26,7 +26,7 @@ public class FirstTests extends BaseTest{
         dressesPage.proceedToCheckout();
 
     }
-    @Test
+    @Test(enabled = false)
     public void validLogin(){
         HomePage homePage = new HomePage(driver);
         homePage.goToLogin();
@@ -38,7 +38,7 @@ public class FirstTests extends BaseTest{
         loginPage.validateLogin();
     }
 
-    @Test(enabled = false)
+    @Test
     public void shopWorkFlow(){
         HomePage homePage = new HomePage(driver);
         homePage.goToLogin();

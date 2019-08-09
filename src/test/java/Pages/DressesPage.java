@@ -11,21 +11,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class DressesPage {
     WebDriver driver;
 
-    public DressesPage(WebDriver driver){
-        this.driver=driver;
+    public DressesPage(WebDriver driver) {
+        this.driver = driver;
     }
-LocatorsRepository locatorsRepository = new LocatorsRepository();
-    public void goToCasualDresses(){
+
+    LocatorsRepository locatorsRepository = new LocatorsRepository();
+
+    public void goToCasualDresses() {
         WebElement casualDressButton = driver.findElement(By.cssSelector(locatorsRepository.getCssCasualDressesMenu()));
 
         casualDressButton.click();
 
     }
 
-    public void selectCasualDress(){
-        WebElement casualDressItem = (new WebDriverWait(driver,10))
+    public void selectCasualDress() {
+        WebElement casualDressItem = (new WebDriverWait(driver, 10))
                 .until(ExpectedConditions.elementToBeClickable(By.cssSelector(locatorsRepository.getCssItemCasualDress())));
-        WebElement addToCartButton =(new WebDriverWait(driver,10))
+        WebElement addToCartButton = (new WebDriverWait(driver, 10))
                 .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(locatorsRepository.getCssAddToCartButton())));
         Actions action = new Actions(driver);
         action.moveToElement(casualDressItem).perform();
@@ -35,7 +37,7 @@ LocatorsRepository locatorsRepository = new LocatorsRepository();
 
     }
 
-    public void proceedToCheckout(){
+    public void proceedToCheckout() {
         WebElement proceedToCheckoutBtn = driver.findElement(By.cssSelector(locatorsRepository.getCssProccedToCheckout()));
         proceedToCheckoutBtn.click();
     }
