@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="12373" started-at="2019-08-09T16:15:41Z" finished-at="2019-08-09T16:15:53Z">
+    <groups>
+    </groups>
+    <test name="/Users/victorcarrillo/Victor-Automation/SeleniumProjectPractice/src/test/java/Tests/FirstTests.java" duration-ms="12373" started-at="2019-08-09T16:15:41Z" finished-at="2019-08-09T16:15:53Z">
+      <class name="Tests.FirstTests">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Tests.FirstTests@3c0f93f1]" name="setup" is-config="true" duration-ms="5131" started-at="2019-08-09T16:15:41Z" finished-at="2019-08-09T16:15:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="addToCartItem()[pri:0, instance:Tests.FirstTests@3c0f93f1]" name="addToCartItem" duration-ms="4394" started-at="2019-08-09T16:15:46Z" finished-at="2019-08-09T16:15:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartItem -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:Tests.FirstTests@3c0f93f1]" name="validLogin" duration-ms="2831" started-at="2019-08-09T16:15:50Z" finished-at="2019-08-09T16:15:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+      </class> <!-- Tests.FirstTests -->
+    </test> <!-- /Users/victorcarrillo/Victor-Automation/SeleniumProjectPractice/src/test/java/Tests/FirstTests.java -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
